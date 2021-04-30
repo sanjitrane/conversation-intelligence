@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import CallTranscript from './pages/CallTransript'
 
-function App() {
+const data={
+  audio:'../data/59e106639d79684277df770d.wav',
+  json:'../data/transcript.json'
+}
+const App=()=>{
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CallTranscript {...data} />
     </div>
   );
 }
